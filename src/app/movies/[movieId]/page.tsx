@@ -1,4 +1,5 @@
 import { IdType, MovieType } from "@/types/allTypes"
+import { PlusIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,6 +38,8 @@ const MovieDetailsPage = async ({ params }: IdType) => {
     const recommandMovie = await resrecomand.json()
 
 
+    let wishlists = []
+
 
 
     console.log(recommandMovie)
@@ -47,16 +50,16 @@ const MovieDetailsPage = async ({ params }: IdType) => {
 
     return (
         <div className="my-16 mx-8 md:mx-10 font-catamaran">
-      
+
             <div>
-                      {/* movie details  */}
+                {/* movie details  */}
                 <div className="flex flex-col md:flex-row gap-16 items-center">
                     <div className="md:w-1/3 relative">
                         <Image className="rounded h-[450px]" src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`} alt="" height={100} width={500} />
                         <span className="px-5 md:px-[29px] py-5 md:py-8 absolute left-[-20px]  top-[-30px] text-2xl md:text-3xl z-30 text-white font-bold  rounded-full bg-[#f1b722]">{movie?.vote_average.toFixed(1)}</span>
                     </div>
                     <div className="md:w-2/3 md:px-10">
-                        <h1 className="text-3xl text-center md:text-6xl font-bold mb-6"> {movie?.title}</h1>
+                        <h1 className="text-3xl text-center md:text-start md:text-6xl font-bold mb-6"> {movie?.title}</h1>
                         <p className="text-lg">{movie?.overview}</p>
                         <p className="mt-6">
                             <strong>Release Date: </strong> {movie?.release_date}
@@ -64,6 +67,15 @@ const MovieDetailsPage = async ({ params }: IdType) => {
                         <p className="mt-1">
                             <strong>Genres: </strong> {movie?.genres.map((genre: any) => genre.name).join(", ")}
                         </p>
+
+
+
+                        <div className="mt-6">
+                            <button className="bg-[#e1ab20] flex items-center gap-2 px-5 py-2 text-white rounded-full">
+                                <PlusIcon className="w-6 h-6 font-bold"></PlusIcon>
+                                <span>Add to wishlist</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
