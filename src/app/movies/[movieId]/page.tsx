@@ -1,3 +1,4 @@
+import BtnWatchlist from "@/components/home/btnWatchlist";
 import { IdType, MovieType } from "@/types/allTypes"
 import { PlusIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
@@ -71,10 +72,11 @@ const MovieDetailsPage = async ({ params }: IdType) => {
 
 
                         <div className="mt-6">
-                            <button className="bg-[#e1ab20] flex items-center gap-2 px-5 py-2 text-white rounded-full">
+                            <BtnWatchlist movie={movie}></BtnWatchlist>
+                            {/* <button className="bg-[#e1ab20] flex items-center gap-2 px-5 py-2 text-white rounded-full">
                                 <PlusIcon className="w-6 h-6 font-bold"></PlusIcon>
                                 <span>Add to wishlist</span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,9 @@ export interface MovieType {
     id: number;
     title: string;
     poster_path: string;
-    vote_average?: number
+    vote_average?: number;
+    overview?: string;
+    release_date?: string;
   }
 
 
@@ -43,4 +45,14 @@ export interface IdType {
 
 export interface castType {
   name: string
+}
+
+
+
+
+
+export interface WatchlistStore {
+  watchlist: MovieType[];
+  addMovie: (movie: MovieType) => void;
+  removeMovie: (id: number) => void;
 }

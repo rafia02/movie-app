@@ -94,12 +94,12 @@ const Movies = () => {
             <div className="bg-stone-800 h-[500px] text-white p-4 rounded">
               <Image
                 className="w-full h-auto mb-4"
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
                 height={100}
                 width={500}
                 alt=""
               />
-              <h3 className="text-[17px] font-semibold">{movie.title}</h3>
+              <h3 className="text-[17px] font-semibold">{movie?.title}</h3>
             </div>
           </Link>
         ))}
