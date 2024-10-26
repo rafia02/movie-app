@@ -64,12 +64,6 @@ const Navbar = () => {
           <Link href="/watchlist" className="text-gray-300 hover:text-white">
             Watchlist
           </Link>
-          <Link href="/about" className="text-gray-300 hover:text-white">
-            About
-          </Link>
-          <Link href="/contact" className="text-gray-300 hover:text-white">
-            Contact
-          </Link>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -93,12 +87,6 @@ const Navbar = () => {
             </Link>
             <Link href="/watchlist" className="text-gray-300 hover:text-white" onClick={toggleMenu}>
               Watchlist
-            </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white" onClick={toggleMenu}>
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white" onClick={toggleMenu}>
-              Contact
             </Link>
           </div>
         </div>

@@ -39,16 +39,6 @@ const MovieDetailsPage = async ({ params }: IdType) => {
     const recommandMovie = await resrecomand.json()
 
 
-    let wishlists = []
-
-
-
-    console.log(recommandMovie)
-
-
-
-
-
     return (
         <div className="my-16 mx-8 md:mx-10 font-catamaran">
 
@@ -68,12 +58,8 @@ const MovieDetailsPage = async ({ params }: IdType) => {
                         <p className="mt-1">
                             <strong>Genres: </strong> {movie?.genres.map((genre: any) => genre.name).join(", ")}
                         </p>
-
-
-
                         <div className="mt-6">
                             <BtnWatchlist movie={movie}></BtnWatchlist>
-*
                         </div>
                     </div>
                 </div>
@@ -112,8 +98,6 @@ const MovieDetailsPage = async ({ params }: IdType) => {
             {/* recommands */}
             <div className="mt-20">
                 <h1 className="mb-5 text-2xl md:text-4xl font-bold text-center">Also Relevant Recommended Movies</h1>
-
-
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-x-3 gap-y-16">
                     {recommandMovie?.results.map((movie: MovieType, index: number) => (
                         <Link key={index} href={`/movies/${movie?.id}`}>
@@ -128,15 +112,11 @@ const MovieDetailsPage = async ({ params }: IdType) => {
                                     />
                                     <span className="px-3 py-2 absolute   top-[-20px]  z-30 text-white font-bold  rounded-full bg-[#f1b722]">{movie?.vote_average?.toFixed(1)}</span>
                                 </div>
-
                                 <h3 className="text-[17px] px-2 font-semibold">{movie.title}</h3>
                             </div>
                         </Link>
                     ))}
                 </div>
-
-
-
             </div>
         </div>
     )

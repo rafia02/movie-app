@@ -19,11 +19,16 @@ const WatchlistPage =() => {
 
 
   return (
-    <div className='px-8 md:px-10 my-10'>
-      <h1 className="text-2xl font-bold text-center mb-5">Your Watchlist</h1>
+    <div className='px-8 md:px-10 my-10 font-catamaran'>
+      <h1 className="text-2xl font-bold text-center mb-5">
+      
+        {
+          initialWatchlist.length > 0? 'Your Watchlist Movies' : 'Your Watchlist No Movies'
+        }
+      </h1>
       <div className='grid grid-cols-1 gap-5'>
         {(initialWatchlist.length > 0 ? initialWatchlist : watchlist).map((movie) => (
-          <div key={movie.id} className="flex border p-5 w-1/2 mx-auto items-center justify-between">
+          <div key={movie.id} className="flex border border-gray-300 rounded p-5 w-1/2 mx-auto items-center justify-between">
             <div className=' flex gap-5'>
 
               <Image

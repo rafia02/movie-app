@@ -53,7 +53,7 @@ const Movies = () => {
   });
 
   return (
-    <div className="container mx-auto p-4 font-catamaran">
+    <div className="container mx-auto p-10 font-catamaran">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <h1 className="text-3xl font-bold mb-4">Popular Movies</h1>
 
@@ -70,7 +70,7 @@ const Movies = () => {
                     message: "Enter at least 3 characters",
                   },
                 })}
-                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
+                className="w-full px-3 py-2 border border-secondary rounded-md focus:outline-none "
                 placeholder="Enter movie title"
               />
               {errors.title && (
@@ -80,7 +80,7 @@ const Movies = () => {
 
             <button
               type="submit"
-              className="w-1/4 h-10 bg-secondary text-white font-medium py-2 px-4 rounded-md duration-500 hover:bg-[#d29f1d] transition"
+              className="w-1/4 h-10 ml-1 bg-secondary text-white font-medium py-2 px-4 rounded-md duration-500 hover:bg-[#d29f1d] transition"
             >
               Search
             </button>
@@ -88,7 +88,7 @@ const Movies = () => {
         </form>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 mt-5 md:grid-cols-4 gap-3">
         {movies.map((movie: MovieType, index) => (
           <Link key={index} href={`/movies/${movie?.id}`}>
             <div className="bg-[#081b27]  h-[500px] text-white p-4 rounded">

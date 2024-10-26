@@ -15,6 +15,7 @@ const config: Config = {
 
       fontFamily: {
         catamaran: ["Catamaran", "sans-serif"],
+        logoText: ["Sevillana", "serif"]
       },
     },
   },
