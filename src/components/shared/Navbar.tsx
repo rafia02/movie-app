@@ -11,10 +11,10 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-gray-900 p-4">
+    <nav className="bg-gray-900 px-5 md:px-10 py-6 font-catamaran">
       <div className=" flex items-center justify-between">
         {/* Logo */}
-        <div className="text-white text-2xl font-bold">
+        <div className="text-[#f1b722] text-2xl font-bold">
           <Link href="/">
             MovieApp
           </Link>
