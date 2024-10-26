@@ -5,17 +5,18 @@ import { MovieType } from '@/types/allTypes';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-function WatchlistPage() {
+const WatchlistPage =() => {
   const { watchlist, removeFromWatchlist } = useWatchlistStore();
   const [initialWatchlist, setInitialWatchlist] = useState<MovieType[]>([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const data = await getWatchlist();
-      setInitialWatchlist(data);
-    }
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async() =>{
+  //     const data = await getWatchlist();
+  //     setInitialWatchlist(data);
+  //   }
+  //   fetchData();
+  // }, []);
+
 
   return (
     <div className='px-8 md:px-10 my-10'>

@@ -73,10 +73,7 @@ const MovieDetailsPage = async ({ params }: IdType) => {
 
                         <div className="mt-6">
                             <BtnWatchlist movie={movie}></BtnWatchlist>
-                            {/* <button className="bg-[#e1ab20] flex items-center gap-2 px-5 py-2 text-white rounded-full">
-                                <PlusIcon className="w-6 h-6 font-bold"></PlusIcon>
-                                <span>Add to wishlist</span>
-                            </button> */}
+*
                         </div>
                     </div>
                 </div>
@@ -87,7 +84,7 @@ const MovieDetailsPage = async ({ params }: IdType) => {
                     <h1 className="mb-5 text-2xl md:text-4xl font-bold text-center">All Credits</h1>
                     <div className="grid grid-cols-2  md:grid-cols-5 gap-5">
                         {
-                            cast?.slice(1, 11).map((c: any) => <div key={c?.id} className="border rounded bg-gray-100">
+                            cast?.slice(1, 11).map((c: any) => <div key={c?.id} className="border border-gray-400 rounded ">
                                 {c?.profile_path ? (
                                     <Image
                                         src={`https://image.tmdb.org/t/p/w200${c?.profile_path}`}
@@ -120,7 +117,7 @@ const MovieDetailsPage = async ({ params }: IdType) => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-x-3 gap-y-16">
                     {recommandMovie?.results.map((movie: MovieType, index: number) => (
                         <Link key={index} href={`/movies/${movie?.id}`}>
-                            <div className=" h-[450px]  bg-gray-100 rounded-lg">
+                            <div className=" h-[450px] border border-gray-400 rounded-lg">
                                 <div className="relative flex flex-col items-center">
                                     <Image
                                         className="w-full rounded-t-lg h-[365px] mb-4"

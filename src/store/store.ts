@@ -1,10 +1,10 @@
-// store/watchlistStore.ts
+
 import { create } from 'zustand';
 
 interface Movie {
   id: number;
   title: string;
-  // Additional fields as needed
+
 }
 
 interface WatchlistStore {

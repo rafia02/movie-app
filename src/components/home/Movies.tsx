@@ -80,7 +80,7 @@ const Movies = () => {
 
             <button
               type="submit"
-              className="w-1/4 h-10 bg-indigo-600 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-700 transition"
+              className="w-1/4 h-10 bg-secondary text-white font-medium py-2 px-4 rounded-md duration-500 hover:bg-[#d29f1d] transition"
             >
               Search
             </button>
@@ -91,7 +91,7 @@ const Movies = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
         {movies.map((movie: MovieType, index) => (
           <Link key={index} href={`/movies/${movie?.id}`}>
-            <div className="bg-stone-800 h-[500px] text-white p-4 rounded">
+            <div className="bg-[#081b27]  h-[500px] text-white p-4 rounded">
               <Image
                 className="w-full h-auto mb-4"
                 src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
@@ -111,7 +111,7 @@ const Movies = () => {
         <div className="text-center mt-4">
           <button
             onClick={loadMoreMovies}
-            className="bg-[#9f8741] hover:bg-[#816e34] duration-500 text-white py-2 px-5 rounded"
+            className="bg-[#dfa81e] hover:bg-[#d29f1d] duration-500 text-white py-2 px-5 rounded"
           >
             Load More
           </button>
