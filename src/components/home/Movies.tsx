@@ -105,7 +105,7 @@ const Movies = () => {
         ))}
       </div>
 
-      {loading && <p className="text-center">Loading...</p>}
+      {/* {loading && <p className="text-center">Loading...</p>} */}
 
       {!loading && more && (
         <div className="text-center mt-4">
